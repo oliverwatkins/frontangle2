@@ -22,24 +22,27 @@ export default class Nav extends React.Component {
   render() {
     const {location} = this.props;
     const {collapsed} = this.state;
-    const featuredClass = location.pathname === "/" ? "active" : "";
+
+    const homeClass = location.pathname === "/" ? "active" : "";
+
     const navClass = collapsed ? "collapse" : "";
 
-    let lineClass = location.pathname.match(/^\/line/) ? "active" : "";
-    let pieClass = location.pathname.match(/^\/pie/) ? "active" : "";
-    let barClass = location.pathname.match(/^\/bar/) ? "active" : "";
+    let previousClass = location.pathname.match(/^\/line/) ? "active" : "";
+    let blogClass = location.pathname.match(/^\/pie/) ? "active" : "";
+    let servicesClass = location.pathname.match(/^\/bar/) ? "active" : "";
+    let ichartsClass = location.pathname.match(/^\/icharts/) ? "active" : "";
+    let contactClass = location.pathname.match(/^\/contactClass/) ? "active" : "";
 
-    barClass = barClass + " bar-chart"
-    lineClass = lineClass + " line-chart"
-    pieClass = pieClass + " pie-chart"
+
+    // <Route path="services" component={ServicesPage}></Route>
+    // <Route path="previous" component={PreviousWorkPage}></Route>
+    //   <Route path="blog" component={BlogPage}></Route>
+    //   <Route path="icharts" component={IcebergChartsPage}></Route>
+    //   <Route path="contact" component={ContactPage}></Route>
 
 
     return (
-
-
-
       <div>
-
         <Header/>
 
         <nav className="navbar navbar-inverse navbar-fixed" role="navigation">
@@ -54,26 +57,31 @@ export default class Nav extends React.Component {
             </div>
             <div className={"navbar-collapse " + navClass} id="bs-example-navbar-collapse-1">
               <ul className="nav navbar-nav">
-                <li className={featuredClass}>
-                  <IndexLink to="/" onClick={this.toggleCollapse.bind(this)}>HomeX</IndexLink>
+
+                <li className={homeClass}>
+                  <IndexLink to="/" onClick={this.toggleCollapse.bind(this)}>Home</IndexLink>
                 </li>
                 <li >
-
-                  <Link to="bar" onClick={this.toggleCollapse.bind(this)} className={barClass}>
-                    asdf
-                  </Link>
-
+                  <Link to="services" onClick={this.toggleCollapse.bind(this)} className={servicesClass}>Services</Link>
                 </li>
                 <li>
-                  <Link to="line" onClick={this.toggleCollapse.bind(this)} className={lineClass}>
-                    fasd
+                  <Link to="previous" onClick={this.toggleCollapse.bind(this)} className={previousClass}>
+                    Previous Work
                   </Link>
                 </li>
                 <li >
-                  <Link to="pie" onClick={this.toggleCollapse.bind(this)} className={pieClass}>
-
-                    fdas
-
+                  <Link to="blog" onClick={this.toggleCollapse.bind(this)} className={blogClass}>
+                    Blog
+                  </Link>
+                </li>
+                <li >
+                  <Link to="icharts" onClick={this.toggleCollapse.bind(this)} className={ichartsClass}>
+                    Iceberg Chart
+                  </Link>
+                </li>
+                <li >
+                  <Link to="contact" onClick={this.toggleCollapse.bind(this)} className={contactClass}>
+                    Contact
                   </Link>
                 </li>
               </ul>

@@ -4,10 +4,14 @@ import { Router, Route, IndexRoute, hashHistory } from "react-router";
 
 
 import PageLayout from "./PageLayout";
-import BarChartPage from "./pages/BarChartPage";
-import PieChartPage from "./pages/PieChartPage";
-import LineChartPage from "./pages/LineChartPage";
-import WelcomePage from "./pages/WelcomePage";
+import HomePage from "./pages/HomePage";
+
+import ServicesPage from "./pages/ServicesPage";
+import PreviousWorkPage from "./pages/PreviousWorkPage";
+import BlogPage from "./pages/BlogPage";
+import IcebergChartsPage from "./pages/IcebergChartsPage";
+import ContactPage from "./pages/ContactPage";
+
 
 const app = document.getElementById('app');
 
@@ -15,11 +19,13 @@ const app = document.getElementById('app');
 ReactDOM.render(
   <Router history={hashHistory}>
     <Route path="/" component={PageLayout}>
-      <IndexRoute component={WelcomePage}></IndexRoute>
+      <IndexRoute component={HomePage}></IndexRoute>
 
-      <Route path="bar" component={BarChartPage}></Route>
-      <Route path="pie" component={PieChartPage}></Route>
-      <Route path="line" component={LineChartPage}></Route>
+      <Route path="services" component={ServicesPage}></Route>
+      <Route path="previous" component={PreviousWorkPage}></Route>
+      <Route path="blog" component={BlogPage}></Route>
+      <Route path="icharts" component={IcebergChartsPage}></Route>
+      <Route path="contact" component={ContactPage}></Route>
     </Route>
   </Router>,
   app);
