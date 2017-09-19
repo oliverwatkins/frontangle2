@@ -6,7 +6,7 @@ export default class BlogPage extends React.Component {
     return (
       <div>
 
-        Blog...
+        Visit my blog :
 
       </div>
     );

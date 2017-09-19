@@ -27,11 +27,11 @@ export default class Nav extends React.Component {
 
     const navClass = collapsed ? "collapse" : "";
 
-    let previousClass = location.pathname.match(/^\/line/) ? "active" : "";
-    let blogClass = location.pathname.match(/^\/pie/) ? "active" : "";
-    let servicesClass = location.pathname.match(/^\/bar/) ? "active" : "";
+    let previousClass = location.pathname.match(/^\/previous/) ? "active" : "";
+    let blogClass = location.pathname.match(/^\/blog/) ? "active" : "";
+    let servicesClass = location.pathname.match(/^\/services/) ? "active" : "";
     let ichartsClass = location.pathname.match(/^\/icharts/) ? "active" : "";
-    let contactClass = location.pathname.match(/^\/contactClass/) ? "active" : "";
+    let contactClass = location.pathname.match(/^\/contact/) ? "active" : "";
 
 
     // <Route path="services" component={ServicesPage}></Route>

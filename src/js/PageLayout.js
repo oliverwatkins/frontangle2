@@ -18,9 +18,9 @@ export default class PageLayout extends React.Component {
       <div>
         <Nav location={location} />
 
-        <div className="container" style={containerStyle}>
-          <div className="row">
-            <div className="col-lg-12">
+        <div style={containerStyle}>
+          <div>
+            <div>
               {this.props.children}
             </div>
           </div>
