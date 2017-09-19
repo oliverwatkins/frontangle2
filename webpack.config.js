@@ -32,7 +32,8 @@ module.exports = {
         }
       },
       { test: /\.css|\.less$/, loaders: ["style-loader", "css-loader", "less-loader"] },
-      { test: /\.jpe?g$|\.gif$|\.png$|\.svg$|\.woff(2)?$|\.ttf$|\.eot$/, loader: "file-loader" }
+      { test: /\.jpe?g$|\.gif$|\.png$|\.PNG$|\.svg$|\.woff(2)?$|\.ttf$|\.eot$/,
+        loader: "file-loader" }
     ]
   },
 
