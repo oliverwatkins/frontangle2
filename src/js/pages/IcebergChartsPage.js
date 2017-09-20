@@ -43,6 +43,8 @@ import c29 from "./ichartsImages/TestStackedChart2.PNG"
 import c30 from "./ichartsImages/TestStackedChart3.PNG"
 
 
+
+
 export default class IcebergChartsPage extends React.Component {
 
   render() {
@@ -58,7 +60,7 @@ export default class IcebergChartsPage extends React.Component {
 
     let styleSize = {width: w, height: h};
     let styleMax = {maxHeight: maxHeight, maxWidth: maxWidth};
-    let styleBorder = {border: '1px solid green'};
+    let styleBorder = {} //border: '1px solid green'};
     let bgImageStyle = {backgroundSize: '80% 80%', backgroundPosition: 'center', backgroundRepeat: 'no-repeat'};
 
     styleSlide = Object.assign({}, styleSlide, styleSize);
@@ -75,16 +77,12 @@ export default class IcebergChartsPage extends React.Component {
       slidesToShow: 3,
       slidesToScroll: 1,
       arrows:true,
-      autoplay:true,
+      autoplay:false,
       autoplaySpeed:500,
-
-
-
     };
 
     return (
-      <div>
-        <button {...this.props}>Next</button>
+      <div style={{padding:"20px", margin:"40px"}}>
         <Slider  {...settings} style={styleSlideContainer}>
           <div style={{ ...styleSlide, backgroundImage: `url(${c1})` }}></div>
           <div style={{ ...styleSlide, backgroundImage: `url(${c2})` }}></div>

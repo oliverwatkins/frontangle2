@@ -1,11 +1,9 @@
 import React from "react";
-
-
-export default class PreviousWorkPage extends React.Component {
+export default class ContactPage extends React.Component {
   render() {
     return (
       <div>
-        Previous Work
+        <h1>Contact</h1>
       </div>
     );
   }
