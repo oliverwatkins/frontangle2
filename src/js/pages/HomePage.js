@@ -11,14 +11,15 @@ export default class WelcomePage extends React.Component {
             <div>
               <h1>Welcome! </h1>
               <ul id="front-page-list">
-                <li>Front end developer Munich based</li>
-                <li>Single Page Applications</li>
-                <li>ReactJS, ExtJS, and the latest Javascript developements</li>
-                <li>Rich Client Applications</li>
-                <li>Clean Web Service / REST Interface</li>
-                <li>Data Visualisations</li>
-                <li>Usability</li>
-                <li>Data Modelling, OOA/D</li>
+                <li>Front end developer Munich based specialising in <b>Single Page Applications</b> using the
+                  latest Javascript such as <b>reactjs</b> and <b>extjs</b>.
+                  <p></p> </li>
+                <li><b>Rich Client Applications</b> in <b>Swing</b> or other java based UI
+                  frameworks such as JavaFX.
+                  <p></p> </li>
+
+                <li>Architecture Consulting, REST Services, JEE,
+                Data Modelling, OOA/D, Data Visualisation and Usability</li>
               </ul>
             </div>
           </div>

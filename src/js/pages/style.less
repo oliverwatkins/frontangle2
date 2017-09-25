@@ -7,20 +7,9 @@
   color: #555454;
 }
 
-
 #front-page-list {
   list-style: none;
 }
-
-//home page
-#front-page-list li {
-  color: #3a4a55;
-}
-#front-page-list li:nth-child(odd) {
-  color: #2239ca;
-}
-
-
 
 #home-page {
   display: flex;
@@ -30,6 +19,14 @@
     display: flex;
     width: 50%;
     flex-grow: 1;
+
+    #front-page-list li {
+      color: #3a4a55;
+    }
+    #front-page-list li:nth-child(odd) {
+      color: #3a4a55;
+    }
+
   }
 
   #home-page-right {
@@ -39,14 +36,32 @@
     background-image: url("./Fotolia_107797505_L.jpg");
     background-size: 500px 333px;
     background-repeat: no-repeat;
-    background-position-x: 0px;
+    background-position-x: 0;
   }
 }
 
+#react-charts {
+  width: 100%;
+  height:500px;
+  background-image: url("./react-charts.jpg");
+  background-size: 500px 333px;
+  background-repeat: no-repeat;
+  background-position-x: 0;
+}
+
+.blocky-thing {
+  padding:20px;
+  margin:20px;
+  color: #555454;
+  background: #f1f1f1;
+  h1 {
+    color: #2239ca;
+  }
+}
 
 #blog {
   width: 100%;
-  height:500px;
+  height:300px;
   background-image: url("./bw.png");
   background-size: 500px 333px;
   background-repeat: no-repeat;
@@ -58,10 +73,7 @@
 }
 
 
-
 //contact
-
-
 .mugshot-image {
   width: 100px;
   height:100px;
@@ -69,5 +81,7 @@
   background-image: url("./prof_photo_nov_2013.png");
   background-size: 100px 100px;
 }
+
+
 
 

@@ -52,19 +52,17 @@ export default class IcebergChartsPage extends React.Component {
     let styleSlide = {};
     let styleSlideContainer = {};
 
-    let maxWidth = "100%";
-    let maxHeight = "100%";
 
     let w = "300px"
-    let h = "400px"
+    let h = "300px"
 
     let styleSize = {width: w, height: h};
-    let styleMax = {maxHeight: maxHeight, maxWidth: maxWidth};
+    // let styleMax = {maxHeight: maxHeight, maxWidth: maxWidth};
     let styleBorder = {} //border: '1px solid green'};
     let bgImageStyle = {backgroundSize: '80% 80%', backgroundPosition: 'center', backgroundRepeat: 'no-repeat'};
 
     styleSlide = Object.assign({}, styleSlide, styleSize);
-    styleSlide = Object.assign({}, styleSlide, styleMax);
+    // styleSlide = Object.assign({}, styleSlide, styleMax);
     styleSlide = Object.assign({}, styleSlide, styleBorder);
     styleSlide = Object.assign({}, styleSlide, bgImageStyle);
 
@@ -82,23 +80,20 @@ export default class IcebergChartsPage extends React.Component {
     };
 
     return (
-      <div className="fa-page" style={{padding:"20px", margin:"40px"}}>
+      <div className="fa-page blocky-thing" style={{padding:"20px", margin:"40px"}}>
 
+        <h1>Iceberg Charts</h1>
         <p>
         Iceberg charts is a comprehensive java charting library.
         </p>
-
         <p>
-
-<a href="https://github.com/oliverwatkins/Iceberg-Charts">
-Visit the project repository here.
-</a>
+          <a href="https://github.com/oliverwatkins/Iceberg-Charts">
+          Visit the project repository here.
+          </a>
         </p>
-
         <p>
 Some examples :
         </p>
-
         <Slider  {...settings} style={styleSlideContainer}>
           <div style={{ ...styleSlide, backgroundImage: `url(${c1})` }}></div>
           <div style={{ ...styleSlide, backgroundImage: `url(${c2})` }}></div>

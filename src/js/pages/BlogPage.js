@@ -8,9 +8,12 @@ export default class BlogPage extends React.Component {
 
 
     return (
-      <div className="fa-page" >
+      <div className="fa-page blocky-thing"  >
 
         <div>
+
+          <h1>Blog</h1>
+
           <p>
 
             <a href="http://www.blue-walrus.com">
