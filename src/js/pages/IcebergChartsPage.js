@@ -87,7 +87,7 @@ export default class IcebergChartsPage extends React.Component {
         Iceberg charts is a comprehensive java charting library.
         </p>
         <p>
-          <a href="https://github.com/oliverwatkins/Iceberg-Charts">
+          <a href="http://www.frontangle.com/icharts/#/">
           Visit the project repository here.
           </a>
         </p>

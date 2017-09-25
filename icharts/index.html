@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Iceberg Charts</title>
+
+    <!-- Our Website CSS Styles -->
+    <link rel="stylesheet" href="icharts_css/main.css">
+
+    <link rel="stylesheet" href="swiper/dist/css/swiper.min.css">
+    <script src="swiper/dist/js/swiper.js"></script>
+    <link rel="stylesheet" href="resources/swiper/dist/css/swiper.min.css">
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+
+    <!-- Vendor: Angular, followed by our custom Javascripts -->
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.18/angular.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.18/angular-route.js"></script>
+
+    <!-- Our Website Javascripts -->
+    <script src="icharts_js/main.js"></script>
+
+</head>
+<body ng-app="frontAngleApp" ng-controller="PageCtrl">
+
+<div ng-include='"header.html"'></div>
+
+<div style = "overflow: hidden; clear:both" >
+    <div class="subpage" ng-view ></div>
+    <div ng-include='"templates/rightpanel.html"' style = "float:right; overflow:hidden;  width:300px"></div>
+</div>
+
+</body>
+</html>
