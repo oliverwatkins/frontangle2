@@ -80,7 +80,7 @@ export default class IcebergChartsPage extends React.Component {
     };
 
     return (
-      <div className="fa-page blocky-thing" style={{padding:"20px", margin:"40px"}}>
+      <div className="fa-page blocky-thing">
 
         <h1>Iceberg Charts</h1>
         <p>

@@ -61,24 +61,24 @@ export default class Nav extends React.Component {
                 <li className={homeClass}>
                   <IndexLink to="/" onClick={this.toggleCollapse.bind(this)}>Home</IndexLink>
                 </li>
-                <li >
-                  <Link to="services" onClick={this.toggleCollapse.bind(this)} className={servicesClass}>Services</Link>
-                </li>
+                {/*<li >*/}
+                  {/*<Link to="services" onClick={this.toggleCollapse.bind(this)} className={servicesClass}>Services</Link>*/}
+                {/*</li>*/}
                 <li>
                   <Link to="previous" onClick={this.toggleCollapse.bind(this)} className={previousClass}>
                     Previous Work
                   </Link>
                 </li>
-                <li >
-                  <Link to="blog" onClick={this.toggleCollapse.bind(this)} className={blogClass}>
-                    Blog
-                  </Link>
-                </li>
-                <li >
-                  <Link to="icharts" onClick={this.toggleCollapse.bind(this)} className={ichartsClass}>
-                    Iceberg Chart
-                  </Link>
-                </li>
+                {/*<li >*/}
+                  {/*<Link to="blog" onClick={this.toggleCollapse.bind(this)} className={blogClass}>*/}
+                    {/*Blog*/}
+                  {/*</Link>*/}
+                {/*</li>*/}
+                {/*<li >*/}
+                  {/*<Link to="icharts" onClick={this.toggleCollapse.bind(this)} className={ichartsClass}>*/}
+                    {/*Iceberg Chart*/}
+                  {/*</Link>*/}
+                {/*</li>*/}
                 <li >
                   <Link to="contact" onClick={this.toggleCollapse.bind(this)} className={contactClass}>
                     Contact
