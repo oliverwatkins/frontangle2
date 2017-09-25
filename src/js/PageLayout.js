@@ -11,7 +11,7 @@ export default class PageLayout extends React.Component {
   render() {
     const { location } = this.props;
     const containerStyle = {
-      marginTop: "60px"
+      marginTop: "0px"
     };
 
     return (

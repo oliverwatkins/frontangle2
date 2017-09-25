@@ -82,7 +82,23 @@ export default class IcebergChartsPage extends React.Component {
     };
 
     return (
-      <div style={{padding:"20px", margin:"40px"}}>
+      <div className="fa-page" style={{padding:"20px", margin:"40px"}}>
+
+        <p>
+        Iceberg charts is a comprehensive java charting library.
+        </p>
+
+        <p>
+
+<a href="https://github.com/oliverwatkins/Iceberg-Charts">
+Visit the project repository here.
+</a>
+        </p>
+
+        <p>
+Some examples :
+        </p>
+
         <Slider  {...settings} style={styleSlideContainer}>
           <div style={{ ...styleSlide, backgroundImage: `url(${c1})` }}></div>
           <div style={{ ...styleSlide, backgroundImage: `url(${c2})` }}></div>

@@ -8,12 +8,15 @@ export default class BlogPage extends React.Component {
 
 
     return (
-      <div>
+      <div className="fa-page" >
 
         <div>
           <p>
-        Visit my blog. I write about projects I am working on, components I have created,
-        problems encountered, technologies reviewed.
+
+            <a href="http://www.blue-walrus.com">
+            My blog </a> is where I write about javascript and javascript frameworks, java
+            swing components, projects I am working on, problems i have encountered, and
+            reviews.
           </p>
         </div>
         <div id="blog"></div>
