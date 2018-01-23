@@ -21,71 +21,45 @@ export default class Nav extends React.Component {
 
   render() {
     const {location} = this.props;
+
     const {collapsed} = this.state;
 
-    const homeClass = location.pathname === "/" ? "active" : "";
+    const homeClassisActive = location.pathname === "/" ? "active" : "";
 
-    const navClass = collapsed ? "collapse" : "";
+    const collapse = collapsed ? "collapse" : "";
 
-    let previousClass = location.pathname.match(/^\/previous/) ? "active" : "";
-    let blogClass = location.pathname.match(/^\/blog/) ? "active" : "";
-    let servicesClass = location.pathname.match(/^\/services/) ? "active" : "";
-    let ichartsClass = location.pathname.match(/^\/icharts/) ? "active" : "";
-    let contactClass = location.pathname.match(/^\/contact/) ? "active" : "";
-
-
-    // <Route path="services" component={ServicesPage}></Route>
-    // <Route path="previous" component={PreviousWorkPage}></Route>
-    //   <Route path="blog" component={BlogPage}></Route>
-    //   <Route path="icharts" component={IcebergChartsPage}></Route>
-    //   <Route path="contact" component={ContactPage}></Route>
-
+    let previousClassisActive = location.pathname.match(/^\/previous/) ? "active" : "";
+    let contactClassisActive = location.pathname.match(/^\/contact/) ? "active" : "";
 
     return (
       <div>
         <Header/>
 
-        <nav className="navbar navbar-inverse navbar-fixed" role="navigation">
-          <div className="container">
-            <div className="navbar-header">
-              <button type="button" className="navbar-toggle" onClick={this.toggleCollapse.bind(this)}>
-                <span className="sr-only">Toggle navigation</span>
-                <span className="icon-bar"></span>
-                <span className="icon-bar"></span>
-                <span className="icon-bar"></span>
-              </button>
-            </div>
-            <div className={"navbar-collapse " + navClass} id="bs-example-navbar-collapse-1">
-              <ul className="nav navbar-nav">
+        <nav className="navbar navbar-default" role="navigation">
+          <div className="container-fluid">
+            <ul className="nav navbar-nav">
 
-                <li className={homeClass}>
-                  <IndexLink to="/" onClick={this.toggleCollapse.bind(this)}>Home</IndexLink>
-                </li>
-                {/*<li >*/}
-                  {/*<Link to="services" onClick={this.toggleCollapse.bind(this)} className={servicesClass}>Services</Link>*/}
-                {/*</li>*/}
-                <li>
-                  <Link to="previous" onClick={this.toggleCollapse.bind(this)} className={previousClass}>
-                    Previous Work
-                  </Link>
-                </li>
-                {/*<li >*/}
-                  {/*<Link to="blog" onClick={this.toggleCollapse.bind(this)} className={blogClass}>*/}
-                    {/*Blog*/}
-                  {/*</Link>*/}
-                {/*</li>*/}
-                {/*<li >*/}
-                  {/*<Link to="icharts" onClick={this.toggleCollapse.bind(this)} className={ichartsClass}>*/}
-                    {/*Iceberg Chart*/}
-                  {/*</Link>*/}
-                {/*</li>*/}
-                <li >
-                  <Link to="contact" onClick={this.toggleCollapse.bind(this)} className={contactClass}>
-                    Contact
-                  </Link>
-                </li>
-              </ul>
-            </div>
+              <li className={homeClassisActive}>
+                <IndexLink to="/" onClick={this.toggleCollapse.bind(this)}>Home</IndexLink>
+              </li>
+              <li>
+                <Link to="previous" onClick={this.toggleCollapse.bind(this)} className={previousClassisActive}>
+                  Previous Work
+                </Link>
+              </li>
+
+              <li>
+                <Link to="icharts" onClick={this.toggleCollapse.bind(this)} >
+                  Icharts
+                </Link>
+              </li>
+
+              <li >
+                <Link to="contact" onClick={this.toggleCollapse.bind(this)} className={contactClassisActive}>
+                  Contact
+                </Link>
+              </li>
+            </ul>
           </div>
         </nav>
       </div>
