@@ -5,7 +5,7 @@ import Nav from "./components/layout/Nav";
 
 /**
  * Contains nav on top, footer on bottom, and all the pages are passed in
- * as children.
+ * as children..
  */
 export default class PageLayout extends React.Component {
   render() {

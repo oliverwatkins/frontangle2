@@ -6,7 +6,6 @@ import { Router, Route, IndexRoute, hashHistory } from "react-router";
 import PageLayout from "./PageLayout";
 import HomePage from "./pages/HomePage";
 
-import ServicesPage from "./pages/ServicesPage";
 import PreviousWorkPage from "./pages/PreviousWorkPage";
 import BlogPage from "./pages/BlogPage";
 import IcebergChartsPage from "./pages/IcebergChartsPage";
@@ -21,7 +20,6 @@ ReactDOM.render(
     <Route path="/" component={PageLayout}>
       <IndexRoute component={HomePage}></IndexRoute>
 
-      <Route path="services" component={ServicesPage}></Route>
       <Route path="previous" component={PreviousWorkPage}></Route>
       <Route path="blog" component={BlogPage}></Route>
       <Route path="icharts" component={IcebergChartsPage}></Route>
