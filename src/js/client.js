@@ -24,17 +24,15 @@ ReactDOM.render(
   <Router history={hashHistory}>
     <Route path="/" component={PageLayout}>
       <IndexRoute component={HomePage}></IndexRoute>
-
       <Route path="previous" component={PreviousWorkPage}></Route>
       <Route path="blog" component={BlogPage}></Route>
-
       <Route path="contact" component={ContactPage}></Route>
     </Route>
     <Route path="icharts" component={PageLayoutICharts}>
       <IndexRoute path="/" component={HomePanel}></IndexRoute>
       <Route path="api" component={ApiPanel}></Route>
       <Route path="screenshots" component={Screenshots}></Route>
-      <Route path="code" component={CodesamplesPanel}></Route>
+      <Route path="codesamples" component={CodesamplesPanel}></Route>
     </Route>
   </Router>,
   app);
