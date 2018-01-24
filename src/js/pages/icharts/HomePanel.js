@@ -6,9 +6,13 @@ export default class HomePanel extends React.Component {
   render() {
     const {location} = this.props;
 
+    // style = {
+    //
+    // }
+
     return (
       <div>
-        <div style="margin:30px">
+        <div style={{margin:"30px"}}>
 
           Iceberg Charts is an advanced charting library for creating charts in Java.
           <br/>
@@ -33,9 +37,9 @@ export default class HomePanel extends React.Component {
           <pre>
             <code>
             &lt;dependency&gt;
-            &lt;groupId&gt;com.frontangle&lt;/groupId&gt;
-            &lt;artifactId&gt;iceberg-charts&lt;/artifactId&gt;
-            &lt;version&gt;1.1.1&lt;/version&gt;
+              &lt;groupId&gt;com.frontangle&lt;/groupId&gt;
+              &lt;artifactId&gt;iceberg-charts&lt;/artifactId&gt;
+              &lt;version&gt;1.1.1&lt;/version&gt;
             &lt;/dependency&gt;
             </code>
           </pre>
@@ -43,8 +47,7 @@ export default class HomePanel extends React.Component {
         </div>
 
 
-        <div style="float:right">
-
+        <div style={{float:"right"}}>
 
         </div>
       </div>

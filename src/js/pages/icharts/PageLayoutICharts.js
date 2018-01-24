@@ -19,15 +19,8 @@ export default class PageLayoutICharts extends React.Component {
       marginTop: "0px"
     };
 
-    // if (location.pathname.match(/^\/icharts/)) {
-    //   return (
-    //     <div>
-    //       <h1>THis is Icharts!!!!!!!!!!!!!sad!!!</h1>
-    //     </div>
-    //   )
-
     return (
-      <div>
+      <div className="icharts">
         <HeaderPanel location={location} />
         <RightPanel location={location} />
         <div style={containerStyle}>

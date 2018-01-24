@@ -10,7 +10,12 @@ import PreviousWorkPage from "./pages/PreviousWorkPage";
 import BlogPage from "./pages/BlogPage";
 import IcebergChartsPage from "./pages/IcebergChartsPage";
 import ContactPage from "./pages/ContactPage";
-import PageLayoutICharts from "./pages/icharts/PageLayoutICharts"
+import PageLayoutICharts from "./pages/icharts/PageLayoutICharts";
+
+import HomePanel from "./pages/icharts/HomePanel";
+import ApiPanel from "./pages/icharts/ApiPanel";
+import Screenshots from "./pages/icharts/Screenshots";
+import CodesamplesPanel from "./pages/icharts/CodesamplesPanel";
 
 const app = document.getElementById('app');
 
@@ -26,8 +31,10 @@ ReactDOM.render(
       <Route path="contact" component={ContactPage}></Route>
     </Route>
     <Route path="icharts" component={PageLayoutICharts}>
-      <Route path="hey" componnts={BlogPage}></Route>
-      <Route path="ho" componnts={ContactPage}></Route>
+      <IndexRoute path="/" component={HomePanel}></IndexRoute>
+      <Route path="api" component={ApiPanel}></Route>
+      <Route path="screenshots" component={Screenshots}></Route>
+      <Route path="code" component={CodesamplesPanel}></Route>
     </Route>
   </Router>,
   app);

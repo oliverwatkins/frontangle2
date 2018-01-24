@@ -14,28 +14,19 @@ export default class PageLayout extends React.Component {
       marginTop: "0px"
     };
 
-    if (location.pathname.match(/^\/icharts/)) {
-      return (
-        <div>
-          <h1>THis is Icharts!!!!!!!!!!!!!!!!</h1>
-        </div>
-      )
+    return (
+      <div>
+        <Nav location={location} />
 
-    }else {
-      return (
-        <div>
-          <Nav location={location} />
-
-          <div style={containerStyle}>
+        <div style={containerStyle}>
+          <div>
             <div>
-              <div>
-                {this.props.children}
-              </div>
+              {this.props.children}
             </div>
-            <Footer/>
           </div>
+          <Footer/>
         </div>
-      );
-    }
+      </div>
+    );
   }
 }
