@@ -1,6 +1,9 @@
 import React from "react";
+import githubImage from './img/icbergcharts2.PNG';
+// import './style.less';
 
-import './style.less';
+import './HeaderPanel.less';
+
 import {IndexLink, Link} from "react-router";
 
 export default class HeaderPanel extends React.Component {
@@ -28,12 +31,10 @@ export default class HeaderPanel extends React.Component {
 
       <div id="header">
         <div id="header-container">
-          <div id="header-title">
+          <div id="header-title-icharts">
             Iceberg Charts
           </div>
-          <div id="header-image"/>
-
-          {/*<div id="icharts-image" ></div>*/}
+          <img src={githubImage}/>
         </div>
 
         <div id="header-blurb">
@@ -60,11 +61,6 @@ export default class HeaderPanel extends React.Component {
                 </Link>
               </li>
 
-              <li className={apiIsActive}>
-                <Link to="icharts/api"  onClick={this.toggleCollapse.bind(this)} >
-                  API
-                </Link>
-              </li>
             </ul>
           </div>
         </nav>
