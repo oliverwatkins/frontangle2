@@ -9,7 +9,7 @@ module.exports = {
   entry: "./js/client.js",
 
   output: {
-    path: __dirname + "/src/",
+    path: __dirname + "/src/dist/",
     filename: "client.min.js"
   },
 
@@ -24,12 +24,24 @@ module.exports = {
         }
       },
       { test: /\.css|\.less$/, loaders: ["style-loader", "css-loader", "less-loader"] },
-      { test: /\.jpe?g$|\.gif$|\.png$|\.html\.htm||\.PNG$|\.svg$|\.woff(2)?$|\.ttf$|\.eot$/,
-
+      {
+        test: /\.jpe?g$|\.gif$|\.png$|\.txt$|\.PNG$|\.svg$|\.woff(2)?$|\.ttf$|\.eot$/,
         use: "file-loader?name=[path][name].[ext]"
-
         // loader: "file-loader"
+      },
+      {
+        test: /\.html$/,
+        exclude: /node_modules/,
+        use: {loader: 'html-loader',
+          options: {
+            attrs: [':data-src']
+          }
+
+        }
       }
+
+
+
       // {
       //   test: /\.(html)$/,
       //   use: {
