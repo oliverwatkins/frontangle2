@@ -13,14 +13,6 @@ module.exports = {
     filename: "client.min.js"
   },
 
-
-  // resolve: {
-  //   modules: [
-  //     path.resolve('./src'),
-  //     path.resolve('./node_modules')
-  //   ]
-  // },
-
   module: {
     loaders: [
       { test: /\.jsx?$/,
@@ -32,8 +24,21 @@ module.exports = {
         }
       },
       { test: /\.css|\.less$/, loaders: ["style-loader", "css-loader", "less-loader"] },
-      { test: /\.jpe?g$|\.gif$|\.png$|\.PNG$|\.svg$|\.woff(2)?$|\.ttf$|\.eot$/,
-        loader: "file-loader" }
+      { test: /\.jpe?g$|\.gif$|\.png$|\.html\.htm||\.PNG$|\.svg$|\.woff(2)?$|\.ttf$|\.eot$/,
+
+        use: "file-loader?name=[path][name].[ext]"
+
+        // loader: "file-loader"
+      }
+      // {
+      //   test: /\.(html)$/,
+      //   use: {
+      //     loader: 'html-loader',
+      //     options: {
+      //       attrs: [':data-src']
+      //     }
+      //   }
+      // }
     ]
   },
 

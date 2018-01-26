@@ -42,7 +42,7 @@ export default class HeaderPanel extends React.Component {
         </div>
         <hr/>
 
-        <nav className="navbar navbar-default" role="navigation">
+        <nav className="navbar navbar-inverse" role="navigation">
           <div className="container-fluid">
             <ul className="nav navbar-nav">
 

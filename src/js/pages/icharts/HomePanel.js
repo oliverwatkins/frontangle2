@@ -35,14 +35,16 @@ export default class HomePanel extends React.Component {
           Add it to your Maven project :
 
           <pre>
+          <span style={{fontSize:10, fontFamily: "courier new"}}>
             <code>
-            &lt;dependency&gt;
-              &lt;groupId&gt;com.frontangle&lt;/groupId&gt;
-              &lt;artifactId&gt;iceberg-charts&lt;/artifactId&gt;
-              &lt;version&gt;1.1.1&lt;/version&gt;
-            &lt;/dependency&gt;
+              &lt;dependency&gt; <br/>
+              &nbsp; &lt;groupId&gt;com.frontangle&lt;/groupId&gt; <br/>
+              &nbsp; &lt;artifactId&gt;iceberg-charts&lt;/artifactId&gt; <br/>
+              &nbsp; &lt;version&gt;1.1.1&lt;/version&gt; <br/>
+              &lt;/dependency&gt;
             </code>
-          </pre>
+          </span>
+        </pre>
 
         </div>
 
