@@ -1,4 +1,8 @@
-<img src='partials/TestDataXY_Boxplot.PNG' style='width:400px;float:right'><div><pre>
+<img src='js/pages/icharts/samples/TestDataXY_Boxplot.PNG' style='width:400px;float:right'>
+<div>
+<pre>
+<span class='code_snippet' style='font-size: 11px'>
+
 ArrayList&lt;XYDataSeries&gt; xySeriesList = new ArrayList&lt;XYDataSeries&gt;();
 
 ArrayList&lt;DataPoint&gt; values = new ArrayList&lt;DataPoint&gt;();
@@ -23,11 +27,11 @@ XAxis xAxis = new XAxis(new LinearNumericalAxisScaling(0.0, 100.0,
 
 xySeriesList.add(series);
 
-XYChart chart = new XYChart(xySeriesList, yAxis, xAxis);
+XYChart chart = new XYChart("","","",xySeriesList, yAxis, xAxis,false);
 
 chart.setSize(1000, 500);
 
 chart.setTitleFont(new Font("Ariel", Font.PLAIN, 24));
 chart.setTitle("Box Plot");
 
-</pre></div>
+</span></pre></div>

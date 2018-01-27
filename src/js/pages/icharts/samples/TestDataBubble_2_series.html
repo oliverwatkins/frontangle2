@@ -1,4 +1,8 @@
-<img src='partials/TestDataBubble_2_series.PNG' style='width:400px;float:right'><div><pre>
+<img src='js/pages/icharts/samples/TestDataBubble_2_series.PNG' style='width:400px;float:right'>
+<div>
+<pre>
+<span class='code_snippet' style='font-size: 11px'>
+
 ArrayList&lt;XYDataSeries&gt; xySeriesList = new ArrayList&lt;XYDataSeries&gt;();
 
 ArrayList&lt;DataPointWithMagnitude&gt; values = new ArrayList&lt;DataPointWithMagnitude&gt;();
@@ -18,7 +22,6 @@ values.add(new DataPointWithMagnitude(344, 20, 12));
 values.add(new DataPointWithMagnitude(378, 80, 55));
 values.add(new DataPointWithMagnitude(400, 60, 66));
 
-
 values2.add(new DataPointWithMagnitude(15, 22, 20));
 values2.add(new DataPointWithMagnitude(40, 30, 70));
 values2.add(new DataPointWithMagnitude(90, 99, 60));
@@ -28,19 +31,25 @@ values2.add(new DataPointWithMagnitude(350, 175, 76));
 values2.add(new DataPointWithMagnitude(370, 134, 40));
 values2.add(new DataPointWithMagnitude(400, 349, 80));
 
-XYDataSeries&lt;DataPointWithMagnitude&gt; series = new XYDataSeries&lt;DataPointWithMagnitude&gt;(values, new UIPointBubble(Color.BLUE), null, "Series 1");
-XYDataSeries&lt;DataPointWithMagnitude&gt; series2 = new XYDataSeries&lt;DataPointWithMagnitude&gt;(values2, new UIPointBubble(Color.ORANGE), null, "Series 2");
+XYDataSeries&lt;DataPointWithMagnitude&gt; series = new XYDataSeries&lt;DataPointWithMagnitude&gt;(
+values, new UIPointBubble(Color.BLUE), null, "Series 1");
+XYDataSeries&lt;DataPointWithMagnitude&gt; series2 = new XYDataSeries&lt;DataPointWithMagnitude&gt;(
+values2, new UIPointBubble(Color.ORANGE), null, "Series 2");
+
 
 NumericalInterval i1 = new NumericalInterval(5, 50.0, new Line(Color.WHITE, false, 1));
 NumericalInterval i2 = new NumericalInterval(2, 10.0, null);
 
-YAxis yAxis = new YAxis(new LinearNumericalAxisScaling(-44.0, 400.0, i1, i2, null), "Y Axis");
-XAxis xAxis = new XAxis(new LinearNumericalAxisScaling(-12.0, 400.0, i1, i2, null), "X Axis");
+
+YAxis yAxis = new YAxis(new LinearNumericalAxisScaling(-44.0, 400.0,
+i1, i2, null), "Y Axis");
+XAxis xAxis = new XAxis(new LinearNumericalAxisScaling(-12.0, 400.0,
+i1, i2, null), "X Axis");
 
 xySeriesList.add(series);
 xySeriesList.add(series2);
 
-XYChart chart = new XYChart(xySeriesList, yAxis, xAxis, 15);
+XYChart chart = new XYChart("","","",xySeriesList, yAxis, xAxis, 15);
 
 chart.setSize(700, 400);
 
@@ -51,4 +60,4 @@ chart.setTitle("Two Series Bubble Chart");
 
 chart.setChartBackground(Color.LIGHT_GRAY);
 
-</pre></div>
+</span></pre></div>

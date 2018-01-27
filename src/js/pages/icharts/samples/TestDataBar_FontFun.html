@@ -1,4 +1,7 @@
-<img src='partials/TestDataBar_FontFun.PNG' style='width:400px;float:right'><div><pre>
+<img src='js/pages/icharts/samples/TestDataBar_FontFun.PNG' style='width:400px;float:right'>
+<div>
+<pre>
+<span class='code_snippet' style='font-size: 11px'>
 
 ArrayList&lt;Color&gt; colors = Utils.makeGradients(Color.RED, Color.BLUE, 12);
 
@@ -10,17 +13,17 @@ values.add(new DataPointBar("Four", 1, colors.get(4)));
 values.add(new DataPointBar("Five", 18, colors.get(5)));
 values.add(new DataPointBar("Six", 40, colors.get(6)));
 
-XYChart chart = new XYChart(values, "Really Big Text", "yadda yadda", "yadda yadda", 40);
+XYChart chart = new XYChart("Some Chart", "Umbrella sales", "number of sunny days", values, 40);
 
-chart.xAxis.axisCatFont = new Font("Blackadder ITC", Font.PLAIN, 16);
-chart.xAxis.font = new Font("Blackadder ITC", Font.PLAIN, 20);
-chart.xAxis.labelText = "Playing with fonts";
+Font font = new Font("Lucida Sans Regular", Font.PLAIN, 32);
 
-chart.yAxis.axisCatFont = new Font("Blackadder ITC", Font.PLAIN, 16);
-chart.yAxis.font = new Font("Blackadder ITC", Font.PLAIN, 20);
+chart.xAxis.axisCatFont = font;
+chart.xAxis.font = font;
 
-chart.setTitleFont("Ravie", Font.PLAIN, 70);
-chart.setTitle("Really Big Text");
+chart.yAxis.axisCatFont = new Font("Blackadder ITC", Font.PLAIN, 18);
+chart.yAxis.font = new Font("Blackadder ITC", Font.PLAIN, 24);
+
+chart.setTitleFont(new Font("Lucida Sans Regular", Font.PLAIN, 32));
 chart.setSize(900, 500);
 
-</pre></div>
+</span></pre></div>

@@ -1,4 +1,8 @@
-<img src='partials/TestDataXY_Math.PNG' style='width:400px;float:right'><div><pre>
+<img src='js/pages/icharts/samples/TestDataXY_Math.PNG' style='width:400px;float:right'>
+<div>
+<pre>
+<span class='code_snippet' style='font-size: 11px'>
+
 ArrayList&lt;XYDataSeries&gt; xySeriesList = new ArrayList&lt;XYDataSeries&gt;();
 
 ArrayList&lt;DataPoint&gt; values = new ArrayList&lt;DataPoint&gt;();
@@ -20,7 +24,9 @@ new Line(Color.BLUE), "x^2");
 series.dataPoints = values;
 
 XYDataSeries series3 = new XYDataSeries(
+
 new UIPointTriangle(Color.PINK), new Line(Color.PINK), "e^x");
+
 series3.dataPoints = values3;
 
 NumericalInterval t1x = new NumericalInterval(6, 10.0, new Line(
@@ -39,24 +45,12 @@ t1x, t2x, t3x), "X Value");
 xySeriesList.add(series);
 xySeriesList.add(series3);
 
-XYChart lineChart = new XYChart(xySeriesList, yAxis, xAxis);
+XYChart chart = new XYChart("","","", xySeriesList, yAxis, xAxis, false);
 
-lineChart.setSize(1000, 500);
-lineChart.rightOffset = 200;
+chart.setSize(1000, 500);
+chart.rightOffset = 200;
 
-lineChart.setTitleFont(new Font("Ariel", Font.PLAIN, 24));
-lineChart.setTitle("Maths");
+chart.setTitleFont(new Font("Ariel", Font.PLAIN, 24));
+chart.setTitle("Maths");
 
-return lineChart;
-}
-
-@Override
-public String getNiceTitle() {
-return "Maths 1";
-}
-
-
-
-
-}
-</pre></div>
+</span></pre></div>

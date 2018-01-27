@@ -1,4 +1,8 @@
-<img src='partials/TestDataXY_Simple_Series.PNG' style='width:400px;float:right'><div><pre>
+<img src='js/pages/icharts/samples/TestDataXY_Simple_Series.PNG' style='width:400px;float:right'>
+<div>
+<pre>
+<span class='code_snippet' style='font-size: 11px'>
+
 ArrayList&lt;XYDataSeries&gt; xySeriesList = new ArrayList&lt;XYDataSeries&gt;();
 
 ArrayList&lt;DataPoint&gt; values = new ArrayList&lt;DataPoint&gt;();
@@ -34,7 +38,7 @@ XYDataSeries series2 = new XYDataSeries(values2, "Second");
 XYDataSeries series3 = new XYDataSeries(values3, "Third");
 XYDataSeries series4 = new XYDataSeries(values4, "Fourth");
 
+XYChart chart = new XYChart("Many Series Example", "My X Axis",
+"My Y Axis", series, series2, series3, series4);
 
-XYChart chart = new XYChart("Many Series Example", "My X Axis", "My Y Axis", series, series2, series3, series4);
-
-</pre></div>
+</span></pre></div>

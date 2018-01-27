@@ -1,4 +1,8 @@
-<img src='partials/TestDataPie_SimplePie.PNG' style='width:400px;float:right'><div><pre>
+<img src='js/pages/icharts/samples/TestDataPie_SimplePie.PNG' style='width:400px;float:right'>
+<div>
+<pre>
+<span class='code_snippet' style='font-size: 11px'>
+
 ArrayList&lt;Segment&gt; values = new ArrayList&lt;Segment&gt;();
 values.add(new Segment(35, "something", Color.RED));
 values.add(new Segment(32, "something else", Color.BLUE));
@@ -8,16 +12,8 @@ values.add(new Segment(7, "that", Color.ORANGE));
 values.add(new Segment(5, "and", Color.CYAN));
 values.add(new Segment(13, "the other", Color.GREEN));
 
-PieChart pieChart = new PieChart(values, "Simple Pie");
+PieChart chart = new PieChart(values, "Simple Pie");
 
-pieChart.setSize(800, 700);
+chart.setSize(800, 700);
 
-return pieChart;
-}
-
-@Override
-public String getNiceTitle() {
-return "Pie : Simple";
-}
-}
-</pre></div>
+</span></pre></div>
