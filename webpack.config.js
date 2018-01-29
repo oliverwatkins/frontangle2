@@ -60,3 +60,18 @@ module.exports = {
     new webpack.optimize.UglifyJsPlugin({ mangle: false, sourcemap: false }),
   ],
 };
+
+
+
+
+// module: {
+//   loaders: [
+//     {
+//       test: /\.html$/,
+//       exclude: /node_modules/,
+//       use: {loader: 'html-loader',
+//         options: {
+//           attrs: [':data-src']
+//         }
+//       }
+//     }

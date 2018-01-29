@@ -4,8 +4,143 @@ import './style.less';
 
 import request from 'superagent';
 
-// import html1 from './samples/TestDataXY_Simple.html'
-// import img1 from './samples/TestDataXY_Simple.PNG'
+
+import samplesFile from './samples/samples.json'
+
+export default class CodeSamplesPanel extends React.Component {
+
+  componentWillMount() {
+
+    //required to load all images with webpack
+    function requireAll(r) {
+      r.keys().forEach(r);
+    }
+
+    requireAll(require.context('./samples/', true));
+
+    this.state = {};
+    this.state.navHeader = samplesFile.samples;
+
+    this.loadHtmlSnippet = this.loadHtmlSnippet.bind(this);
+    this.loadImage = this.loadImage.bind(this);
+    this.loadBoth = this.loadBoth.bind(this);
+
+  }
+
+
+  loadBoth(fileName) {
+    this.loadImage(fileName);
+    this.loadHtmlSnippet(fileName);
+  }
+
+
+  loadImage(fileName) {
+    let arr = samplesFile["samples"];
+
+    let elem = arr.find((elem) => {
+      return elem.fileName == fileName;
+    })
+
+    this.state.urlToLoad = elem.url;
+
+    let self = this;
+    request
+      .get(elem.urlPath + "/" + elem.fileName + ".PNG")
+      .then(function (res) {
+        self.setState({pngToLoad: elem.urlPath + elem.fileName + ".PNG"});
+      })
+      .catch(function (err) {
+        alert(err)
+      });
+  }
+
+  loadHtmlSnippet(fileName) {
+
+    let arr = samplesFile["samples"];
+
+    let elem = arr.find((elem) => {
+      return elem.fileName == fileName;
+
+    })
+    this.state.urlToLoad = elem.url;
+
+
+    let self = this;
+    request
+      .get(elem.urlPath + "/" + elem.fileName + ".html")
+      .then(function (res) {
+
+        let html = {};
+
+        let module = {}
+
+        if (res.text.startsWith('module')) {
+          var js = eval(res.text);
+          html = js
+
+        } else {
+          html = res.text;
+        }
+        self.setState({htmlToLoad: html});
+      })
+      .catch(function (err) {
+        alert(err)
+      });
+  }
+
+  render() {
+
+    let selectImg = this.loadBoth;
+
+    const {location} = this.props;
+
+    let navHeadersArray = this.state.navHeader;
+    let htmlToLoad = this.state.htmlToLoad;
+    let pngToLoad = this.state.pngToLoad;
+
+    let style = {
+      marginTop: 30,
+      float: "left",
+      width:"50%",
+      border: "1px solid #000"
+    }
+
+    let imgStyle = {
+      marginTop: 30,
+      float: "left",
+      width:"200px",
+      border: "1px solid #000"
+    }
+
+    return (
+      <div>
+        <h1>Code Samples</h1>
+        <h3>Quickly get started with these samples</h3>
+        <div id="tabs">
+
+          <div>
+            <ul>
+              {navHeadersArray.map(function (name, index) {
+                return <li key={index} onClick={e => selectImg(name.fileName)}>{name.title}</li>;
+              })}
+            </ul>
+          </div>
+          asfdf
+
+        </div>
+        <br/>
+        <div style={style}>
+          asdfsdasfd
+          <img src={"" + pngToLoad} style={imgStyle}/>
+          <div dangerouslySetInnerHTML={{__html: htmlToLoad}}></div>
+
+
+        </div>
+      </div>
+    )
+  }
+}
+
 
 import TestDataXY_Simple_HTML from './samples/TestDataXY_Simple.html'
 import TestDataXY_Simple_PNG from './samples/TestDataXY_Simple.PNG'
@@ -63,134 +198,3 @@ import TestDataPie_Multi_HTML from './samples/TestDataPie_Multi.html'
 import TestDataPie_Multi_PNG from './samples/TestDataPie_Multi.PNG'
 import TestDataBar_2Y_HTML from './samples/TestDataBar_2Y.html'
 import TestDataBar_2Y_PNG from './samples/TestDataBar_2Y.PNG'
-
-
-
-
-
-
-import samplesFile from './samples/samples.json'
-
-// import TestDataBar_4_GradientColor from './samples/TestDataBar_4_GradientColor.PNG'
-// import TestDataBar_2Y_PNG from './samples/TestDataBar_2Y.PNG'
-// import TestDataBar_2Y from './samples/TestDataBar_2Y.txt'
-
-// import TestDataBar_4_GradientColor from './samples/TestDataBar_4_GradientColor.PNG'
-
-
-// import
-
-export default class CodeSamplesPanel extends React.Component {
-
-
-  componentWillMount() {
-    function requireAll(r) {
-      r.keys().forEach(r);
-    }
-    requireAll(require.context('./samples/', true));
-
-
-
-    // this.blah = bind()
-
-    this.state = {};
-    this.state.navHeader = samplesFile.samples;
-
-
-    this.blah = this.blah.bind(this);
-
-    // function requireAll(r) { r.keys().forEach(r); }
-    //
-    //
-    // requireAll(require.context('./modules/', true, /\.js$/));
-
-
-  }
-
-
-  blah(fileName) {
-
-
-    let arr = samplesFile["samples"];
-
-    let elem = arr.find((elem)=> {
-      return elem.fileName == fileName;
-
-    })
-    // alert(JSON.stringify(elem.url))
-    this.state.urlToLoad = elem.url;
-
-
-    let self = this;
-    // http://localhost:8080/js/pages/icharts/samples/TestDataXY_Simple.html
-    // elem.url = "js/pages/icharts/samples/TestDataXY_Simple.html"
-    request
-      .get(elem.url)
-      .then(function(res) {
-        // alert(JSON.stringify(res.text))
-
-        self.setState({htmlToLoad: res.text}); // = res.text;
-      })
-      .catch(function(err) {
-        alert(err)
-      });
-
-    // samplesFile
-
-    // request
-    //
-    // // import samplesFile from './samples/samples.json'
-    //   .get('./js/pages/icharts/img/icbergcharts2.PNG')
-    //
-    //   // .get('./src/js/pages/icharts/screenshots/img1.PNG')
-    //   .then(function(res) {
-    //     alert(JSON.stringify(res))
-    //   })
-    //   .catch(function(err) {
-    //     alert(err)
-    //   });
-
-  }
-
-
-
-
-  render() {
-
-    let selectImg = this.blah;
-
-    const { location } = this.props;
-
-    let navHeadersArray = this.state.navHeader;
-    let urlToLoad = this.state.urlToLoad
-
-    // let imgToDiesplay = <img src={img1}  className='screenshot-image'/>
-    // let htmlToDisplay = TestDataXY_Simple_HTML;
-
-    // let htmlDoc = {__html: TestDataXY_Scatter_HTML};
-    let htmlToLoad = this.state.htmlToLoad;
-
-    return (
-      <div id="tabs">
-        <h1>Code Samples</h1>
-        <h3>Quickly get started with these samples</h3>
-        <ul>
-        {navHeadersArray.map(function(name, index){
-          return <li key={index} onClick={e=>selectImg(name.fileName)}>{name.title}</li>;
-        })}
-        </ul>
-
-        {/*{imgToDiesplay}*/}
-        <div dangerouslySetInnerHTML={{__html:htmlToLoad}} ></div>
-
-      </div>
-    )
-
-    // var mainInfo = null;
-    // $http.get('partials/samples.json').success(function(data) {
-    //   mainInfo = data;
-    //   $scope.tabs = data.samples;
-    //   // alert('mainInfo : ' + mainInfo)
-    // });
-  }
-}
