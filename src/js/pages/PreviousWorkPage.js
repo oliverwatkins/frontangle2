@@ -13,8 +13,8 @@ export default class PreviousWorkPage extends React.Component {
         <p/>
         In my spare time, these are some of the things I work on :
         <div>
-          {/*<IcebergChartsPage/>*/}
-          {/*<BlogPage/>*/}
+          <IcebergChartsPage/>
+          <BlogPage/>
           <ReactChartsPage/>
         </div>
       </div>
