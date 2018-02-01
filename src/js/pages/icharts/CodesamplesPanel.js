@@ -1,6 +1,6 @@
 import React from "react";
 
-import './style.less';
+import './CodesamplesPanel.less';
 
 import request from 'superagent';
 
@@ -60,7 +60,6 @@ export default class CodeSamplesPanel extends React.Component {
 
     let elem = arr.find((elem) => {
       return elem.fileName == fileName;
-
     })
     this.state.urlToLoad = elem.url;
 
@@ -97,44 +96,41 @@ export default class CodeSamplesPanel extends React.Component {
     let navHeadersArray = this.state.navHeader;
     let htmlToLoad = this.state.htmlToLoad;
     let pngToLoad = this.state.pngToLoad;
+    let url = this.state.urlToLoad;
 
-    let style = {
+
+    let bottomStyle = {
       marginTop: 30,
-      float: "left",
-      width:"50%",
-      border: "1px solid #000"
     }
 
     let imgStyle = {
-      marginTop: 30,
-      float: "left",
-      width:"200px",
-      border: "1px solid #000"
+      width:"400px",
     }
 
     return (
       <div>
         <h1>Code Samples</h1>
-        <h3>Quickly get started with these samples</h3>
+        <h4>Quickly get started with these samples</h4>
         <div id="tabs">
 
           <div>
             <ul>
               {navHeadersArray.map(function (name, index) {
+
+
+                if (pngToLoad && pngToLoad === name.png) {
+                  // alert('hix ' + pngToLoad)
+                }
+
                 return <li key={index} onClick={e => selectImg(name.fileName)}>{name.title}</li>;
               })}
             </ul>
           </div>
-          asfdf
-
         </div>
         <br/>
-        <div style={style}>
-          asdfsdasfd
+        <div id="mainView" style={bottomStyle}>
           <img src={"" + pngToLoad} style={imgStyle}/>
           <div dangerouslySetInnerHTML={{__html: htmlToLoad}}></div>
-
-
         </div>
       </div>
     )
