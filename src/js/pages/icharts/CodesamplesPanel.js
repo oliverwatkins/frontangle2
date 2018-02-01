@@ -76,7 +76,6 @@ export default class CodeSamplesPanel extends React.Component {
         if (res.text.startsWith('module')) {
           var js = eval(res.text);
           html = js
-
         } else {
           html = res.text;
         }
@@ -112,17 +111,14 @@ export default class CodeSamplesPanel extends React.Component {
         <h1>Code Samples</h1>
         <h4>Quickly get started with these samples</h4>
         <div id="tabs">
-
           <div>
             <ul>
               {navHeadersArray.map(function (name, index) {
-
-
-                if (pngToLoad && pngToLoad === name.png) {
-                  // alert('hix ' + pngToLoad)
+                if (pngToLoad && pngToLoad === name.urlPath + name.fileName + ".PNG") {
+                  return <li key={index} className='active'>{name.title}</li>;
+                }else {
+                  return <li key={index} onClick={e => selectImg(name.fileName)}>{name.title}</li>;
                 }
-
-                return <li key={index} onClick={e => selectImg(name.fileName)}>{name.title}</li>;
               })}
             </ul>
           </div>

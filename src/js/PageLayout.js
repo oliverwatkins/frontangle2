@@ -1,7 +1,7 @@
 import React from "react";
 
-import Footer from "./components/layout/Footer";
-import Nav from "./components/layout/Nav";
+import Footer from "./layout/Footer";
+import Nav from "./layout/Nav";
 
 /**
  * Contains nav on top, footer on bottom, and all the pages are passed in

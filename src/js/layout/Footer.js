@@ -5,6 +5,7 @@ export default class Footer extends React.Component {
   render() {
     const footerStyles = {
         marginTop: "30px",
+        marginLeft:"10px",
         // backgroundColor: "#333",
         width: "100%",
         bottom: 20,
@@ -13,8 +14,8 @@ export default class Footer extends React.Component {
 
     return (
       <footer style={footerStyles}>
-        <div className="rowXXX">
-          <div className="col-XXXXlg-12">
+        <div>
+          <div>
             <p>Copyright &copy; Frontangle.com</p>
           </div>
         </div>
