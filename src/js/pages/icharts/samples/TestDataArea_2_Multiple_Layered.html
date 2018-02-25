@@ -1,0 +1,53 @@
+<div>
+<pre>
+<span class='code_snippet' style='font-size: 11px'>
+
+ArrayList&lt;DataPoint&gt; values = new ArrayList&lt;DataPoint&gt;();
+values.add(new DataPoint(5, 96));
+values.add(new DataPoint(58, 43));
+values.add(new DataPoint(101, 90));
+values.add(new DataPoint(135, 67));
+values.add(new DataPoint(150, 70));
+values.add(new DataPoint(165, 67));
+values.add(new DataPoint(196, 1));
+
+ArrayList&lt;DataPoint&gt; values2 = new ArrayList&lt;DataPoint&gt;();
+values2.add(new DataPoint(5, 1));
+values2.add(new DataPoint(58, 63));
+values2.add(new DataPoint(101, 290));
+values2.add(new DataPoint(135, 167));
+values2.add(new DataPoint(150, 80));
+values2.add(new DataPoint(165, 67));
+values2.add(new DataPoint(196, 1));
+
+ArrayList&lt;DataPoint&gt; values3 = new ArrayList&lt;DataPoint&gt;();
+values3.add(new DataPoint(5,6));
+values3.add(new DataPoint(58, 33));
+values3.add(new DataPoint(101, 77));
+values3.add(new DataPoint(135, 123));
+values3.add(new DataPoint(150, 321));
+values3.add(new DataPoint(165, 412));
+values3.add(new DataPoint(196, 312));
+
+
+XYDataSeries&lt;DataPoint&gt; xyDataSeries = new XYDataSeries&lt;DataPoint&gt;("alabama");
+xyDataSeries.dataPoints = values;
+xyDataSeries.setArea(new Area(new Color(173, 13, 213, 80)));
+
+XYDataSeries&lt;DataPoint&gt; xyDataSeries2 = new XYDataSeries&lt;DataPoint&gt;("maryland");
+xyDataSeries2.dataPoints = values2;
+xyDataSeries2.setArea(new Area(new Color(113, 213, 113, 80)));
+
+XYDataSeries&lt;DataPoint&gt; xyDataSeries3 = new XYDataSeries&lt;DataPoint&gt;("california");
+xyDataSeries3.dataPoints = values3;
+xyDataSeries3.setArea(new Area(new Color(12, 233, 3, 80)));
+
+ArrayList&lt;XYDataSeries&gt; ds = new ArrayList&lt;XYDataSeries&gt;();
+ds.add(xyDataSeries);
+ds.add(xyDataSeries2);
+ds.add(xyDataSeries3);
+
+XYChart chart = new XYChart("Multiple Area with opacity and overlap", "X Axis",
+"Y Axis", ds);
+
+</span></pre></div>

@@ -8,7 +8,6 @@ import HomePage from "./pages/HomePage";
 
 import PreviousWorkPage from "./pages/PreviousWorkPage";
 import BlogPage from "./pages/BlogPage";
-import IcebergChartsPage from "./pages/IcebergChartsPage";
 import ContactPage from "./pages/ContactPage";
 import PageLayoutICharts from "./pages/icharts/PageLayoutICharts";
 

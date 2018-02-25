@@ -1,6 +1,7 @@
 import React from "react";
-import githubImage from './img/icbergcharts2.PNG';
-// import './style.less';
+import icebergImage from './img/icbergcharts2.PNG';
+import headerImage from './img/icharts-banner.PNG';
+
 
 import './HeaderPanel.less';
 
@@ -28,17 +29,14 @@ export default class HeaderPanel extends React.Component {
     const apiIsActive = location.pathname === "/icharts/api" ? "active" : "";
 
     return (
-
       <div id="header">
         <div id="header-container">
-          <div id="header-title-icharts">
-            Iceberg Charts
-          </div>
-          <img src={githubImage}/>
+            <img id="header-title-icharts" src={headerImage}/>
+          <img src={icebergImage}/>
         </div>
 
         <div id="header-blurb">
-          Free Java Charting Library and Framework
+          Free Java Charting Library and Framework, for use in Java2D, Swing or JavaFX applications.
         </div>
         <hr/>
 
