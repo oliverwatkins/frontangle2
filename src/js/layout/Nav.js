@@ -3,9 +3,6 @@ import {IndexLink, Link} from "react-router";
 
 import Header from "./Header.js";
 
-
-import './style.less';
-
 export default class Nav extends React.Component {
   constructor() {
     super()
@@ -50,7 +47,7 @@ export default class Nav extends React.Component {
 
               <li>
                 <Link to="icharts" onClick={this.toggleCollapse.bind(this)} >
-                  Icharts
+                  Iceberg Charts
                 </Link>
               </li>
 

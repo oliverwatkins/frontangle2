@@ -1,28 +1,28 @@
-@width: 100px;
-@posX: 20px;
+
+@import "../global";
+
+
+//@headerBgColor:#f1f1f1;
+@headerBgColor:@globalGray;
 
 .Header {
-
-  background: #f1f1f1;
-  //width:@width;
+  background: @headerBgColor;
   height:200px;
-  //margin: 2px 20px 2px 2px;
-  //padding-left: 50px;
-  //padding-right: 50px;
-
-
-  //background-width: 200px;
   background-size: 200px 128px;
   background-repeat: no-repeat;
 
-}
-//50 - 32
-#header-image {
-  height:100%;
-  background-image: url("../../img/FrontAngle_For_Site.png");
-  background-size: 250px 161px;
-  background-repeat: no-repeat;
-  background-position-x: @posX;
-  background-position-y: @posX;
+  @multiplyFactor: 1px;
+  @widthImg: calc(250px * @multiplyFactor);
+  @heightImg: calc(161px * @multiplyFactor);
+
+  #header-image {
+    height:100%;
+    background-image: url("../../img/FrontAngle_For_Site.png");
+    background-size: @widthImg @heightImg;
+    background-repeat: no-repeat;
+    background-position-x: 20px; //nudge it out from the corner
+    background-position-y: 20px;
+  }
+
 }
 

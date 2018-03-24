@@ -19,8 +19,6 @@ import c12 from "./icharts/samples/TestDataBar_MultiBar_Stacked.PNG"
 
 import c13 from "./icharts/samples/TestDataBubble_1_guns.PNG"
 
-// import c14 from "./icharts/samples/TestDataGrids_1_gridSimple.PNG"
-// import c15 from "./icharts/samples/TestDataGrids_2_GraphPaper.PNG"
 import c16 from "./icharts/samples/TestDataGrids_3_alternateGridFillX.PNG"
 import c17 from "./icharts/samples/TestDataGrids_4_alternateGridFillY.PNG"
 import c18 from "./icharts/samples/TestDataGrids_5_Gradiant.PNG"
@@ -43,8 +41,6 @@ import c29 from "./icharts/samples/TestStackedChart2.PNG"
 import c30 from "./icharts/samples/TestStackedChart3.PNG"
 
 
-
-
 export default class IcebergChartsPage extends React.Component {
 
   render() {
@@ -52,9 +48,8 @@ export default class IcebergChartsPage extends React.Component {
     let styleSlide = {};
     let styleSlideContainer = {};
 
-
-    let w = "300px"
-    let h = "300px"
+    let w = "300px";
+    let h = "300px";
 
     let styleSize = {width: w, height: h};
     // let styleMax = {maxHeight: maxHeight, maxWidth: maxWidth};
@@ -87,7 +82,7 @@ export default class IcebergChartsPage extends React.Component {
         Iceberg charts is a comprehensive java charting library.
         </p>
         <p>
-          <a href="http://www.frontangle.com/icharts/#/">
+          <a href="/#/icharts">
           Visit the project repository here.
           </a>
         </p>
