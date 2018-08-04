@@ -21,6 +21,7 @@ export default class PageLayoutICharts extends React.Component {
 
     return (
       <div className="icharts">
+        icharts
         <HeaderPanel location={location} />
         <RightPanel location={location} />
         <div style={containerStyle}>

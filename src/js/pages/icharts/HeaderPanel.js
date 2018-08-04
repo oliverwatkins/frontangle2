@@ -1,11 +1,10 @@
 import React from "react";
 import icebergImage from './img/icbergcharts2.PNG';
 import headerImage from './img/icharts-banner.PNG';
-
+import {Link, withRouter} from "react-router-dom";
 
 import './HeaderPanel.less';
 
-import {IndexLink, Link} from "react-router";
 
 export default class HeaderPanel extends React.Component {
 
@@ -45,20 +44,18 @@ export default class HeaderPanel extends React.Component {
             <ul className="nav navbar-nav">
 
               <li className={homeClassisActive}>
-                <IndexLink to="icharts/" onClick={this.toggleCollapse.bind(this)}>Home</IndexLink>
+                <Link to="icharts/" onClick={this.toggleCollapse.bind(this)}>Home</Link>
               </li>
               <li className={screenshotsIsActive}>
                 <Link to="icharts/screenshots" onClick={this.toggleCollapse.bind(this)}>
                   Screenshots
                 </Link>
               </li>
-
               <li className={codesamplesIsActive} >
                 <Link to="icharts/codesamples" onClick={this.toggleCollapse.bind(this)} >
                   Code Samples
                 </Link>
               </li>
-
             </ul>
           </div>
         </nav>

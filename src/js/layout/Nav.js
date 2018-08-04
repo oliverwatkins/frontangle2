@@ -1,9 +1,11 @@
 import React from "react";
-import {IndexLink, Link} from "react-router";
+// import {IndexLink, Link} from "react-router";
+
+import {Link, withRouter} from "react-router-dom";
 
 import Header from "./Header.js";
 
-export default class Nav extends React.Component {
+export class Nav extends React.Component {
   constructor() {
     super()
     this.state = {
@@ -35,22 +37,19 @@ export default class Nav extends React.Component {
         <nav className="navbar navbar-default" role="navigation">
           <div className="container-fluid">
             <ul className="nav navbar-nav">
-
               <li className={homeClassisActive}>
-                <IndexLink to="/" onClick={this.toggleCollapse.bind(this)}>Home</IndexLink>
+                <Link to="/" onClick={this.toggleCollapse.bind(this)}>Home</Link>
               </li>
               <li>
                 <Link to="previous" onClick={this.toggleCollapse.bind(this)} className={previousClassisActive}>
                   Previous Work
                 </Link>
               </li>
-
               <li>
                 <Link to="icharts" onClick={this.toggleCollapse.bind(this)} >
                   Iceberg Charts
                 </Link>
               </li>
-
               <li >
                 <Link to="contact" onClick={this.toggleCollapse.bind(this)} className={contactClassisActive}>
                   Contact
@@ -63,3 +62,7 @@ export default class Nav extends React.Component {
     );
   }
 }
+
+
+//HOC gives Nav access to routing objects
+export default withRouter(Nav)
