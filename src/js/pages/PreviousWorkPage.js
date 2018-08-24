@@ -1,8 +1,10 @@
 import React from "react";
 
-import IcebergChartsPage from "./IcebergChartsPage"
+import IcebergChartsPage2 from "./IcebergChartsPage2"
 import BlogPage from "./BlogPage"
 import ReactChartsPage from "./ReactChartsPage"
+
+
 
 export default class PreviousWorkPage extends React.Component {
   render() {
@@ -15,7 +17,7 @@ export default class PreviousWorkPage extends React.Component {
           In my spare time, these are some of the things I work on :
         </div>
         <div>
-          <IcebergChartsPage/>
+          <IcebergChartsPage2/>
           <BlogPage/>
           <ReactChartsPage/>
         </div>
