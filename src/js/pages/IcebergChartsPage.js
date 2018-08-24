@@ -63,6 +63,21 @@ export default class IcebergChartsPage extends React.Component {
 
     styleSlideContainer = Object.assign({}, styleSlideContainer, styleSize);
 
+
+
+
+    styleSlideContainer = {width: "300px", height: "300px"};
+    // styleSlide = {width: "300px", height: "300px"};
+    styleSlide = {
+      backgroundPosition : "center",
+      backgroundRepeat : "no-repeat",
+      backgroundSize : "80% 80%",
+      height : "50px",
+      width : "50px"
+    }
+
+
+
     var settings = {
       dots: true,
       infinite: true,
@@ -75,7 +90,7 @@ export default class IcebergChartsPage extends React.Component {
     };
 
     return (
-      <div className="fa-page blocky-thing">
+      <div className="blocky-thing">
 
         <h1>Iceberg Charts</h1>
         <p>
@@ -89,7 +104,7 @@ export default class IcebergChartsPage extends React.Component {
         <p>
 Some examples :
         </p>
-        <Slider  {...settings} style={styleSlideContainer}>
+        <Slider {...settings} style={styleSlideContainer}>
           <div style={{ ...styleSlide, backgroundImage: `url(${c1})` }}></div>
           <div style={{ ...styleSlide, backgroundImage: `url(${c2})` }}></div>
           {/*<div style={{ ...styleSlide, backgroundImage: `url(${c3})` }}></div>*/}

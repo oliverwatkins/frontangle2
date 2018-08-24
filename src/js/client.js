@@ -1,54 +1,13 @@
 import React from "react";
 import ReactDOM from "react-dom";
 
-import { BrowserRouter, HashRouter} from "react-router-dom";
-
-import PageLayout from "./PageLayout";
-import HomePage from "./pages/HomePage";
+import { HashRouter, BrowserRouter} from "react-router-dom";
 
 import Main from "./Main"
-
-import PreviousWorkPage from "./pages/PreviousWorkPage";
-import BlogPage from "./pages/BlogPage";
-import ContactPage from "./pages/ContactPage";
-import PageLayoutICharts from "./pages/icharts/PageLayoutICharts";
-
-import HomePanel from "./pages/icharts/HomePanel";
-import ApiPanel from "./pages/icharts/ApiPanel";
-import Screenshots from "./pages/icharts/Screenshots";
-// import CodesamplesPanel from "./pages/icharts/CodesamplesPanel";
-
 const app = document.getElementById('app');
-
 
 ReactDOM.render(
     <HashRouter>
       <Main/>
     </HashRouter>,
   app);
-
-
-
-
-
-
-
-
-
-
-// ReactDOM.render(
-//   <Router history={hashHistory}>
-//     <Route path="/" component={PageLayout}>
-//       <IndexRoute component={HomePage}></IndexRoute>
-//       <Route path="previous" component={PreviousWorkPage}></Route>
-//       <Route path="blog" component={BlogPage}></Route>
-//       <Route path="contact" component={ContactPage}></Route>
-//     </Route>
-//     <Route path="icharts" component={PageLayoutICharts}>
-//       <IndexRoute path="/" component={HomePanel}></IndexRoute>
-//       <Route path="api" component={ApiPanel}></Route>
-//       <Route path="screenshots" component={Screenshots}></Route>
-//       <Route path="codesamples" component={CodesamplesPanel}></Route>
-//     </Route>
-//   </Router>,
-//   app);

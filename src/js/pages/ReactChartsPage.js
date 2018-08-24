@@ -6,7 +6,7 @@ export default class ReactChartsPage extends React.Component {
 
   render() {
     return (
-      <div className="fa-page blocky-thing" >
+      <div className="blocky-thing" >
         <div>
           <h1>React Charts</h1>
           <p>

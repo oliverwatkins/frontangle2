@@ -11,11 +11,22 @@ h1 {
 }
 //global
 .fa-page {
+  //width:900px;
   padding: 20px;
   font-size: 18px;
   color: @textColor;
   font-family: Arial, Helvetica, sans-serif;
+  display: flex;
+  width: 100%;
 }
+
+
+#previous-page {
+  display: flex;
+  flex-direction: column;
+  //width: 20%;
+}
+
 
 #home-page {
   display: flex;
@@ -42,6 +53,7 @@ h1 {
   //@blockyImgSize: calc(@blockyImgSize * (2px 2px));
   //padding:20px;
   margin:20px;
+  padding: 20px;
   color: @blockyTextColor;
   background:@blockyBackground;
   h1 {

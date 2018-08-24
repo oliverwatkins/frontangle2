@@ -42,17 +42,16 @@ export default class HeaderPanel extends React.Component {
         <nav className="navbar navbar-inverse" role="navigation">
           <div className="container-fluid">
             <ul className="nav navbar-nav">
-
               <li className={homeClassisActive}>
-                <Link to="icharts/" onClick={this.toggleCollapse.bind(this)}>Home</Link>
+                <Link to="/icharts" onClick={this.toggleCollapse.bind(this)}>Home</Link>
               </li>
               <li className={screenshotsIsActive}>
-                <Link to="icharts/screenshots" onClick={this.toggleCollapse.bind(this)}>
+                <Link to="/icharts/screenshots" onClick={this.toggleCollapse.bind(this)}>
                   Screenshots
                 </Link>
               </li>
               <li className={codesamplesIsActive} >
-                <Link to="icharts/codesamples" onClick={this.toggleCollapse.bind(this)} >
+                <Link to="/icharts/codesamples" onClick={this.toggleCollapse.bind(this)} >
                   Code Samples
                 </Link>
               </li>

@@ -38,20 +38,20 @@ export class Nav extends React.Component {
           <div className="container-fluid">
             <ul className="nav navbar-nav">
               <li className={homeClassisActive}>
-                <Link to="/" onClick={this.toggleCollapse.bind(this)}>Home</Link>
+                <Link to="/main" onClick={this.toggleCollapse.bind(this)}>Home</Link>
               </li>
               <li>
-                <Link to="previous" onClick={this.toggleCollapse.bind(this)} className={previousClassisActive}>
+                <Link to="/main/previous" onClick={this.toggleCollapse.bind(this)} className={previousClassisActive}>
                   Previous Work
                 </Link>
               </li>
               <li>
-                <Link to="icharts" onClick={this.toggleCollapse.bind(this)} >
+                <Link to="/icharts/" onClick={this.toggleCollapse.bind(this)} >
                   Iceberg Charts
                 </Link>
               </li>
               <li >
-                <Link to="contact" onClick={this.toggleCollapse.bind(this)} className={contactClassisActive}>
+                <Link to="/main/contact" onClick={this.toggleCollapse.bind(this)} className={contactClassisActive}>
                   Contact
                 </Link>
               </li>
