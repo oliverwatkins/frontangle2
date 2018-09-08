@@ -5,6 +5,8 @@ import {Link, withRouter} from "react-router-dom";
 
 import Header from "./Header.js";
 
+import "./header.less";
+
 export class Nav extends React.Component {
   constructor() {
     super()
@@ -31,7 +33,7 @@ export class Nav extends React.Component {
     let contactClassisActive = location.pathname.match(/^\/contact/) ? "active" : "";
 
     return (
-      <div>
+      <div className="allNavBar">
         <Header/>
 
         <nav className="navbar navbar-default" role="navigation">

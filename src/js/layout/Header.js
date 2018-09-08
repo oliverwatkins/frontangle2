@@ -4,6 +4,18 @@ import './header.less';
 
 export default class Header extends React.Component {
   render() {
+
+
+    // let style = {};
+    // style.position = "fixed"
+
+
+
+
+
+
+
+
     return (
       <div className="Header">
         <div id="header-image">
