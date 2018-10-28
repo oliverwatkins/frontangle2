@@ -45,9 +45,23 @@ export class Nav extends React.Component {
     //
     // };
 
+    const headerStyle = {
+      position: "sticky",
+      width:"100%",
+      color: "pink",
+      backgroundColor: "white",
+      // left: 0,
+      top: 0,
+      // // position: "fixed",
+      // transform: "translateZ(0)",
+      zIndex: 99
+
+    };
+
+
     return (
 
-        <nav className="navbar navbar-default" role="navigation">
+        <nav style={headerStyle} className="navbar navbar-default" role="navigation">
           <div className="container-fluid">
             <ul className="nav navbar-nav">
               <li className={homeClassisActive}>

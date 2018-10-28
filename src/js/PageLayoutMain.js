@@ -9,6 +9,9 @@ import ContactPage from "./pages/ContactPage";
 import HomePage from "./pages/HomePage";
 import PreviousWorkPage from "./pages/PreviousWorkPage";
 
+import Banner from "./layout/Banner.js";
+import Nav from "./layout/Nav.js";
+
 // import BouncySwitch from "./BouncySwitch"
 import FadeSwitch from "./FadeSwitch"
 import './style.less';
@@ -31,10 +34,14 @@ export default class PageLayout extends React.Component {
       backgroundColor: "red"
     };
 
+
+
     //TODO disabling fadeswitch for now! It is interfering with the sticky header!!
     return (
       <div>
-        <Header/>
+        <Banner/>
+        <Nav />
+
         <div >
           <div>
             <div>
