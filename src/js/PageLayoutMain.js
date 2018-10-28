@@ -1,7 +1,7 @@
 import React from "react";
 
 import Footer from "./layout/Footer";
-import Nav from "./layout/Nav";
+import Header from "./layout/Header";
 
 import {Switch, Route} from 'react-router-dom'
 
@@ -9,11 +9,10 @@ import ContactPage from "./pages/ContactPage";
 import HomePage from "./pages/HomePage";
 import PreviousWorkPage from "./pages/PreviousWorkPage";
 
-
 // import BouncySwitch from "./BouncySwitch"
 import FadeSwitch from "./FadeSwitch"
 import './style.less';
-import { spring, AnimatedSwitch } from 'react-router-transition';
+import {spring, AnimatedSwitch} from 'react-router-transition';
 
 
 /**
@@ -23,25 +22,33 @@ import { spring, AnimatedSwitch } from 'react-router-transition';
  */
 export default class PageLayout extends React.Component {
   render() {
-    const { location } = this.props;
-    const containerStyle = {
-      marginTop: "0px"
+    const {location} = this.props;
+
+
+    const headerStyle = {
+      position: "fixed",
+      color: "pink",
+      backgroundColor: "red"
     };
+
+    //TODO disabling fadeswitch for now! It is interfering with the sticky header!!
     return (
       <div>
-        <Nav location={location} />
-        <div style={containerStyle}>
+        <Header/>
+        <div >
           <div>
             <div>
-              <FadeSwitch>
-                <Route exact path="/main" component = {HomePage}/>
-                <Route path="/main/previous" component = {PreviousWorkPage}/>
-                <Route path="/main/contact" component = {ContactPage}/>
-              </FadeSwitch>
+              {/*<FadeSwitch>*/}
+                <Route exact path="/main" component={HomePage}/>
+                <Route path="/main/previous" component={PreviousWorkPage}/>
+                <Route path="/main/contact" component={ContactPage}/>
+              {/*</FadeSwitch>*/}
             </div>
           </div>
           <Footer/>
         </div>
+
+
       </div>
     );
   }

@@ -1,10 +1,6 @@
 import React from "react";
-// import {IndexLink, Link} from "react-router";
-
 import {Link, withRouter} from "react-router-dom";
-
-import Header from "./Header.js";
-
+import Banner from "./Banner.js";
 import "./header.less";
 
 export class Nav extends React.Component {
@@ -22,9 +18,7 @@ export class Nav extends React.Component {
 
   render() {
     const {location} = this.props;
-
     const {collapsed} = this.state;
-
     const homeClassisActive = location.pathname === "/" ? "active" : "";
 
     const collapse = collapsed ? "collapse" : "";
@@ -32,9 +26,26 @@ export class Nav extends React.Component {
     let previousClassisActive = location.pathname.match(/^\/previous/) ? "active" : "";
     let contactClassisActive = location.pathname.match(/^\/contact/) ? "active" : "";
 
+    // let navStyle = {
+    //   // position: "fixed"
+    //   position: "sticky"
+    //   //position: -webkit-sticky;
+    //   //top: 0;
+    // }
+
+    // const headerStyle = {
+    //   position: "sticky",
+    //   color: "pink",
+    //   backgroundColor: "red",
+    //   left: 0,
+    //   top: 0,
+    //   // position: "fixed",
+    //   transform: "translateZ(0)",
+    //   zOrder:999999
+    //
+    // };
+
     return (
-      <div className="allNavBar">
-        <Header/>
 
         <nav className="navbar navbar-default" role="navigation">
           <div className="container-fluid">
@@ -60,11 +71,9 @@ export class Nav extends React.Component {
             </ul>
           </div>
         </nav>
-      </div>
     );
   }
 }
-
 
 //HOC gives Nav access to routing objects
 export default withRouter(Nav)

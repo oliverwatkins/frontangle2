@@ -6,32 +6,16 @@
 @headerBgColor:@globalGray;
 
 .navbar {
-
-  //position: fixed;
-  //position: sticky;
-  //position: -webkit-sticky;
-  //top: 0;
-
-}
-
-
-.allNavBar {
   //position: fixed;
   //position: sticky;
   //position: -webkit-sticky;
   //top: 0;
 }
-
 
 .Header {
-
-
   //position: sticky;
   //position: -webkit-sticky;
   //top: 0;
-
-
-
   background: @headerBgColor;
   height:200px;
   background-size: 200px 128px;
@@ -44,11 +28,23 @@
   #header-image {
     height:100%;
     background-image: url("../../img/FrontAngle_For_Site.png");
+
+    //@media (max-width: 1199px) { background-size: 50px 50px; }
+    //@media (max-width: 991px) { background-size: 20px 20px; }
+    //@media (max-width: 767px) { background-size: 500px 500px; }
+    //@media (max-width: 480px) { background-size: 50px 50px; }
+
+
+
+
     background-size: @widthImg @heightImg;
     background-repeat: no-repeat;
     background-position-x: 20px; //nudge it out from the corner
     background-position-y: 20px;
   }
+
+
+
 
 }
 
