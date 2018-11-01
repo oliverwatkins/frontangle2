@@ -8,7 +8,7 @@ export default class ReactChartsPage extends React.Component {
     return (
       <div className="blocky-thing" >
         <div>
-          <h1>React Charts</h1>
+          <h4>React Charts</h4>
           <p>
             <a href="http://www.frontangle.com/reactCharts/#/">
               My React Charting application </a> is a continuous 'work in progress' charting

@@ -1,7 +1,6 @@
 import React from "react";
 
 import Footer from "./layout/Footer";
-import Header from "./layout/Header";
 
 import {Switch, Route} from 'react-router-dom'
 

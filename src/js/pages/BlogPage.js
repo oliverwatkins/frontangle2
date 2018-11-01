@@ -8,7 +8,7 @@ export default class BlogPage extends React.Component {
     return (
       <div className="blocky-thing">
         <div>
-          <h1>Blog</h1>
+          <h4>Blog</h4>
           <p>
             <a href="http://www.blue-walrus.com">
             My blog </a> is where I write about javascript and javascript frameworks, java

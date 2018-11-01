@@ -7,12 +7,14 @@ export default class WelcomePage extends React.Component {
   render() {
     const homePage = {
       display: "flex",
-      width: "100%"
+      width: "100%",
     };
     const homePageLeft = {
       display: "flex",
       width: "50%",
-      flexGrow: 1
+      flexGrow: 1,
+      // margin:"30px",
+      padding:"10px 30px 10px 30px"
     };
     const homePageRight = {
       width: "50%",
@@ -31,14 +33,21 @@ export default class WelcomePage extends React.Component {
             <div>
               <h1>Welcome </h1>
               <span>
-                Front end developer Munich based specialising in single page applications using the
-                latest Javascript such as reactjs and extjs.
+                Munich based developer with almost 20 years experience in Java and Javascript specialising in
               </span>
             <p/>
-              <b>Rich client applications in java swing or other java based UI frameworks such as JavaFX. </b>
-                <p/>
-                Architecture Consulting, REST Services, JEE,
-                Data Modelling, OOA/D, Data Visualisation and Usability
+              <ul>
+                <li>
+                  Single page applications using the latest Javascript frameworks such as <b>reactjs</b>, <b>node </b> and <b>extjs</b>.
+                </li>
+                <li>
+                  Backend developement in Java and the JEE ecosystem
+                </li>
+                <li>
+                  Coaching, Business Analysis, Systems Engineering, and developement of Database Systems
+                </li>
+              </ul>
+            <p/>
             </div>
           </div>
           <div style={homePageRight}/>

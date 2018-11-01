@@ -104,16 +104,12 @@ export default class IcebergChartsPage2 extends React.Component {
     return (
       <div className="blocky-thing">
 
-        <h1>Iceberg Charts</h1>
+        <h4>Iceberg Charts</h4>
         <p>
-        Iceberg charts is a comprehensive java charting library.
-        </p>
-        <p>
+        Iceberg charts is a comprehensive java charting library
           <a href="/#/icharts">
-          Visit the project repository here.
+          (Visit the project repository on Github).
           </a>
-        </p>
-        <p>
           Some chart examples can be seen here :
         </p>
         <ImageGallery id="ImageGallery" items={someInterestingImages} />

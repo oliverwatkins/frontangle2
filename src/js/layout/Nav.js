@@ -1,7 +1,8 @@
 import React from "react";
 import {Link, withRouter} from "react-router-dom";
-import Banner from "./Banner.js";
 import "./header.less";
+// import "./nav.less";
+
 
 export class Nav extends React.Component {
   constructor() {
@@ -26,38 +27,14 @@ export class Nav extends React.Component {
     let previousClassisActive = location.pathname.match(/^\/previous/) ? "active" : "";
     let contactClassisActive = location.pathname.match(/^\/contact/) ? "active" : "";
 
-    // let navStyle = {
-    //   // position: "fixed"
-    //   position: "sticky"
-    //   //position: -webkit-sticky;
-    //   //top: 0;
-    // }
-
-    // const headerStyle = {
-    //   position: "sticky",
-    //   color: "pink",
-    //   backgroundColor: "red",
-    //   left: 0,
-    //   top: 0,
-    //   // position: "fixed",
-    //   transform: "translateZ(0)",
-    //   zOrder:999999
-    //
-    // };
-
     const headerStyle = {
       position: "sticky",
       width:"100%",
       color: "pink",
       backgroundColor: "white",
-      // left: 0,
       top: 0,
-      // // position: "fixed",
-      // transform: "translateZ(0)",
       zIndex: 99
-
     };
-
 
     return (
 
