@@ -14,6 +14,7 @@ import FadeSwitch from "./FadeSwitch"
 import './style.less';
 
 /**
+ *test
  *
  * Contains nav on top, footer on bottom, and all the pages are passed in
  * as children.
